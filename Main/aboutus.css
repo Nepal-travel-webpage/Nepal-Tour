@@ -1,0 +1,651 @@
+/* ===============================================
+   ABOUT US PAGE - CLEANED & OPTIMIZED CSS
+   Nepal Travels - Himalayan Trekking Company
+=============================================== */
+
+/* ===== BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #fff;
+  font-family: 'HelveticaNeueMedium', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Main Wrapper */
+#main {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ===============================================
+   HERO SECTION
+=============================================== */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-image: url('https://images.pexels.com/photos/914128/pexels-photo-914128.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(0.6);
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 20px;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 3.5em;
+  font-weight: 800;
+  line-height: 1.2;
+  text-shadow: 2px 4px 20px rgba(0, 0, 0, 0.5);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ===============================================
+   ABOUT JOURNEY SECTION
+=============================================== */
+
+.about-journey {
+  background: #ffffff;
+  padding: 120px 8%;
+  color: #111;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ---------- HEADER ---------- */
+
+.about-header h1 {
+  font-size: clamp(42px, 6vw, 88px);
+  font-weight: 500;
+  letter-spacing: -1px;
+  margin-bottom: 100px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* ---------- GRID ---------- */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: start;
+  margin-bottom: 80px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 2px;
+} 
+
+.about-image.large img {
+  height: 520px;
+}
+
+.about-image.small img {
+  height: 380px;
+  margin-top: 120px;
+}
+
+.image-caption {
+  font-size: 13px;
+  color: #555;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* ---------- TEXT ---------- */
+
+.about-text .small-title {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: #777;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.about-text h2 {
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: 500;
+  margin-bottom: 28px;
+  line-height: 1.3;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 18px;
+  max-width: 520px;
+}
+
+/* ===============================================
+   WHO WE ARE SECTION (#page10)
+=============================================== */
+
+#page10 {
+  min-height: 1vh;
+  width: 100%;
+  background-color: #fff;
+  padding: 60px 10%;
+  margin-bottom: 60px;
+}
+
+#page10 img {
+  width: 100%;
+  border-radius: 30px;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+#page10 > h1 {
+  font-size: clamp(32px, 5vw, 54px);
+  color: #000;
+  line-height: 1.3;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #ddd;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#page10-content {
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+#page10-content #right-10 {
+  width: 100%;
+  max-width: 900px;
+  color: #000;
+}
+
+#page10-content #right-10 p {
+  font-size: clamp(16px, 2vw, 20px);
+  color: #333;
+  line-height: 1.8;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* ===============================================
+   FLIP BOX SECTION
+=============================================== */
+
+.flip-box-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 220px;
+  height: 160px;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, 
+.flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.flip-box-front {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+
+.flip-box-front h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #000;
+  font-weight: 600;
+}
+
+.flip-box-front span {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2e4f5e;
+}
+
+.flip-box-back {
+  background: linear-gradient(135deg, #2e4f5e 0%, #1a3a4a 100%);
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-box-back p {
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 0 10px;
+  text-align: center;
+}
+
+/* ===============================================
+   FOUNDERS SECTION
+=============================================== */
+
+.founders {
+  margin-top: 120px;
+  padding-top: 60px;
+  border-top: 2px solid #eee;
+}
+
+.founders h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 500;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.founder-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ---------- FOUNDER CARD ---------- */
+
+.founder-card {
+  max-width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.founder-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.founder-card img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.6s ease, transform 0.6s ease;
+}
+
+.founder-card:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.02);
+}
+
+.founder-card h3 {
+  font-size: 22px;
+  margin-top: 22px;
+  font-weight: 600;
+  padding: 0 20px;
+  color: #111;
+}
+
+.founder-card span {
+  display: block;
+  font-size: 13px;
+  color: #777;
+  margin: 8px 0 16px;
+  letter-spacing: 0.5px;
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+
+.founder-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+  padding: 0 20px 30px;
+  margin-bottom: 10px;
+}
+
+/* ===============================================
+   FOOTER
+=============================================== */
+
+footer {
+  background-color: #0a2540;
+  color: white;
+  padding: 3rem 2rem;
+  margin-top: 80px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  flex: 1 1 200px;
+  margin: 20px;
+}
+
+.footer-col h3 {
+  color: #1abc9c;
+  font-size: 18px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #1abc9c;
+  padding-bottom: 10px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  padding: 6px 0;
+  font-size: 15px;
+}
+
+.footer-col p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #1abc9c;
+  text-decoration: underline;
+}
+
+/* ===============================================
+   RESPONSIVE BREAKPOINTS
+=============================================== */
+
+/* ===== TABLET (≤ 1024px) ===== */
+@media (max-width: 1024px) {
+  .about-journey {
+    padding: 100px 6%;
+  }
+
+  .about-header h1 {
+    margin-bottom: 60px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .about-image.small img {
+    margin-top: 0;
+    height: 320px;
+  }
+
+  .founder-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .flip-box-container {
+    gap: 30px;
+  }
+}
+
+/* ===== MOBILE (≤ 768px) ===== */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .about-journey {
+    padding: 80px 5%;
+  }
+
+  .about-header h1 {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
+
+  .about-image.large img,
+  .about-image.small img {
+    height: auto;
+  }
+
+  .about-text p {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  #page10 {
+    padding: 40px 5%;
+  }
+
+  #page10-content #right-10 p {
+    font-size: 16px;
+  }
+
+  .flip-box-container {
+    gap: 20px;
+  }
+
+  .flip-box {
+    width: 180px;
+    height: 140px;
+  }
+
+  .flip-box-front h3 {
+    font-size: 14px;
+  }
+
+  .flip-box-front span {
+    font-size: 24px;
+  }
+
+  .flip-box-back p {
+    font-size: 12px;
+  }
+
+  .founders {
+    margin-top: 80px;
+  }
+
+  .founder-card img {
+    height: auto;
+    max-height: 400px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-col {
+    margin: 15px 0;
+  }
+}
+
+/* ===== SMALL MOBILE (≤ 480px) ===== */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-journey {
+    padding: 60px 4%;
+  }
+
+  .about-header h1 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .about-text h2 {
+    font-size: 24px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+  }
+
+  #page10 {
+    padding: 30px 4%;
+  }
+
+  #page10 > h1 {
+    font-size: 26px;
+    padding-bottom: 20px;
+  }
+
+  #page10-content #right-10 p {
+    font-size: 15px;
+  }
+
+  .flip-box {
+    width: 160px;
+    height: 130px;
+  }
+
+  .flip-box-front h3 {
+    font-size: 13px;
+  }
+
+  .flip-box-front span {
+    font-size: 20px;
+  }
+
+  .flip-box-back p {
+    font-size: 11px;
+  }
+
+  .founders h2 {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+
+  .founder-card h3 {
+    font-size: 20px;
+  }
+
+  .founder-card p {
+    font-size: 14px;
+  }
+}
+
+/* ===== EXTRA SMALL (≤ 360px) ===== */
+@media (max-width: 360px) {
+  .hero-content h1 {
+    font-size: 1.4rem;
+  }
+
+  .about-header h1 {
+    font-size: 24px;
+  }
+
+  .flip-box {
+    width: 140px;
+    height: 120px;
+  }
+
+  .flip-box-front h3 {
+    font-size: 12px;
+  }
+
+  .flip-box-front span {
+    font-size: 18px;
+  }
+}
+
+/* ===============================================
+   ACCESSIBILITY
+=============================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ===============================================
+   END OF ABOUT US CSS
+=============================================== */

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Precious Moments Safaris</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="tailor made safari.css" />
+</head>
+<body>
+
+
+    <div class="hero">
+      <div class="bg-video"></div>
+
+      <nav>
+        <div class="nav-wrapper">
+          <img src="http://www.preciousmomentssafaris.com/wp-content/uploads/2024/05/Logo-Main-Web.png" alt="Logo" class="logo" />
+
+          <div id="nav-part2">
+            <h4><a href="#home">HOME</a></h4>
+            <h4><a href="#overview">OUR STORY</a></h4>
+            <h4><a href="#experience">EXPERIENCES</a></h4>
+            <h4><a href="#">DESTINATIONS</a></h4>
+            <h4><a href="#about">ABOUT US</a></h4>
+            <h4><a href="#contact">CONTACT US</a></h4>
+          </div>
+
+          <a href="#tailor-made" class="btn-top">TAILOR MADE SAFARIS</a>
+
+          <div class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="closeMobileMenu()"></div>
+      <div class="mobile-menu" id="mobileMenu">
+        <h4><a href="#home" onclick="closeMobileMenu()">HOME</a></h4>
+        <h4><a href="#overview" onclick="closeMobileMenu()">OUR STORY</a></h4>
+        <h4><a href="#experience" onclick="closeMobileMenu()">EXPERIENCES</a></h4>
+        <h4><a href="#" onclick="closeMobileMenu()">DESTINATIONS</a></h4>
+        <h4><a href="#about" onclick="closeMobileMenu()">ABOUT US</a></h4>
+        <h4><a href="#contact" onclick="closeMobileMenu()">CONTACT US</a></h4>
+        <a href="#tailor-made" class="btn-top">TAILOR MADE SAFARIS</a>
+      </div>
+
+      <div class="hero-content">
+        <h1>14-Day Mount Everest Base Camp Trek</h1>
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
+
+
+<form action="https://formspree.io/f/myzpeajg" method="POST">
+  <div class="trip-planner-container">
+    <h1>Trip Planner</h1>
+    <p>Your tailormade precious moments adventure starts here.</p>
+    <strong>TELL US YOUR OUTLINE TRAVEL PLANS AND WE'LL RECOMMEND SOME SAMPLE TRIP IDEAS</strong>
+
+    <div class="question-title">
+      Which destinations are you interested in visiting?
+    </div>
+
+    <div class="checkbox-grid">
+      <label><input type="checkbox" name="destinations" value="Katavi National Park"> Kailash Mansarover</label>
+      <label><input type="checkbox" name="destinations" value="Lake Manyara"> Lake Manyara</label>
+      <label><input type="checkbox" name="destinations" value="Mahale Mountains"> Mahale Mountains National Park</label>
+      
+    </div>
+
+    <div class="note">
+      Choosing the 'Undecided' option will allow us to assist you in making a travel decision.
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Who's joining your journey?</h2>
+    <div class="grid">
+      <label><input type="radio" name="party-size" value="Solo" required>Solo</label>
+      <label><input type="radio" name="party-size" value="Couple">Couple</label>
+      <label><input type="radio" name="party-size" value="Family">Family (Select if children are included)</label>
+      <label><input type="radio" name="party-size" value="Small Group">Small Group (3–4)</label>
+      <label><input type="radio" name="party-size" value="Big Group">Big Group (5 or more)</label>
+    </div>
+    <p class="note">For the 'Family' option, please provide the number of children and their ages in the comments section below.</p>
+  </div>
+
+  <div class="section">
+    <h2>How many day are you planning?</h2>
+    <div class="grid">
+      <label><input type="radio" name="safari-days" value="2 to 3 Days" required>2 to 3 Days</label>
+      <label><input type="radio" name="safari-days" value="4 to 6 Days">4 to 6 Days</label>
+      <label><input type="radio" name="safari-days" value="6 to 7 Days">6 to 7 Days</label>
+      <label><input type="radio" name="safari-days" value="8+ Days">8+ Days</label>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>What is your budget for the trip?</h2>
+    <div class="grid">
+      <label><input type="radio" name="budget" value="Budget" required>Budget</label>
+      <label><input type="radio" name="budget" value="Mid range">Mid range</label>
+      <label><input type="radio" name="budget" value="Luxury">Luxury</label>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Your Email Address</h2>
+    <input type="email" name="email" required placeholder="Enter your email">
+  </div>
+
+  <div class="section">
+    <h2>Additional Comments</h2>
+    <textarea name="message" rows="5" placeholder="Include any special requests, number of children and their ages (if Family option selected), or other details."></textarea>
+  </div>
+
+  <input type="submit" value="Submit">
+</form>
+
+
+
+
+
+ </div>
+</div>
+
+
+  <script>
+    document.querySelectorAll('.accordion-title').forEach(title => {
+      title.addEventListener('click', () => {
+        const isOpen = title.nextElementSibling.style.display === 'block';
+
+        // Close all
+        document.querySelectorAll('.accordion-content').forEach(c => c.style.display = 'none');
+        document.querySelectorAll('.accordion-title span').forEach(s => s.textContent = '+');
+
+        // Open selected if it wasn't already
+        if (!isOpen) {
+          title.nextElementSibling.style.display = 'block';
+          title.querySelector('span').textContent = '−';
+        }
+      });
+    });
+  </script>
+
+
+    
+
+
+    
+    
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script> 
+</body>
+</html>

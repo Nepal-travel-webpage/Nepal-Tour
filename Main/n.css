@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  background: #f7f7f7;
+  color: #111;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  align-items: center;
+}
+
+.btn {
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 90vh;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-title {
+  position: absolute;
+  font-size: 120px;
+  top: 20%;
+  left: 10%;
+  color: rgba(255,255,255,0.3);
+}
+
+.hero-card {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  background: white;
+  padding: 25px;
+  width: 300px;
+}
+
+/* JOURNEY */
+.journey {
+  display: flex;
+  padding: 100px 10%;
+  gap: 60px;
+}
+
+.orange {
+  background: orange;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+}
+
+/* SPLIT */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.split-card {
+  position: relative;
+}
+
+.split-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.split-card h2 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 48px;
+}
+
+/* TRANSPORT */
+.transport {
+  padding: 100px 10%;
+}
+
+.transport-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin-top: 40px;
+}
+
+/* DEST */
+.destinations {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding: 80px 10%;
+  gap: 30px;
+}
+
+.dest-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* TRADITIONAL */
+.traditional {
+  position: relative;
+}
+
+.traditional img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.traditional h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 100px;
+  color: white;
+}
+
+/* GUIDE */
+.guide {
+  padding: 100px 10%;
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin-top: 40px;
+}
+
+.guide-grid div {
+  padding: 30px;
+  border: 1px solid #ddd;
+}
+
+.guide-grid .active {
+  background: black;
+  color: white;
+}
+
+/* TESTIMONIAL */
+.testimonial {
+  text-align: center;
+  padding: 120px 20%;
+}
+
+.testimonial img {
+  width: 120px;
+  border-radius: 50%;
+  margin: 30px 0;
+}
+
+/* FOOTER */
+.footer {
+  background: #000;
+  color: white;
+  padding: 80px 10%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+/* SECTION */
+.thailand-section {
+  position: relative;
+  padding: 140px 0;
+  overflow: hidden;
+}
+
+/* BIG BACKGROUND TEXT */
+.bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 200px;
+  font-weight: 800;
+  color: rgba(0,0,0,0.04);
+  letter-spacing: 20px;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* CARD WRAPPER */
+.cards {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  z-index: 2;
+}
+
+/* CARD BASE */
+.card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* IMAGES */
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SIZES */
+.card.big {
+  width: 340px;
+}
+
+.card.big img {
+  height: 340px;
+}
+
+.card.small {
+  width: 260px;
+}
+
+.card.small img {
+  height: 260px;
+}
+
+/* POSITIONING */
+.card.left {
+  transform: translateY(120px);
+}
+
+.card.right {
+  transform: translateY(-60px);
+}
+
+/* TEXT */
+.card h2 {
+  padding: 18px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.caption {
+  padding: 14px 16px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #222;
+}
