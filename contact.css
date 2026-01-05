@@ -1,0 +1,455 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+
+/* ===========================
+   CONTACT SECTION
+   =========================== */
+/* ================= COSMIC VARIABLES ================= */
+:root {
+  --blue-dark: #0b2c3d;
+  --blue-main: #164b63;
+  --blue-soft: #f2f8fb;
+  --text-dark: #0f172a;
+  --text-soft: #5c6f7d;
+  --border-soft: #d6e4ec;
+}
+
+/* ================= CONTACT CONTAINER ================= */
+.contact-container {
+  max-width: 1200px;
+  margin: 6rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 5rem;
+}
+
+/* =========/* ================= LEFT IMAGE ================= */
+.contact-left {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Image block */
+.contact-image {
+  height: 520px;
+  border-radius: 22px;
+  background-image:
+    linear-gradient(
+      rgba(11, 44, 61, 0.25),
+      rgba(11, 44, 61, 0.55)
+    ),
+    url("20231108_093323.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 30px 70px rgba(11, 44, 61, 0.25);
+}
+
+/* Content */
+.contact-left-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+  .contact-left {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-image {
+    height: 360px;
+  }
+}
+
+/* ================= RIGHT ================= */
+.contact-right {
+  background: var(--blue-soft);
+  border-radius: 22px;
+  padding: 3rem;
+}
+
+.contact-right h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--blue-dark);
+  margin-bottom: 2rem;
+  letter-spacing: 0.08em;
+}
+
+/* ================= FORM ================= */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+input,
+textarea {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border-soft);
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--blue-main);
+}
+
+/* ================= INQUIRY BUTTONS ================= */
+.inquiry-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.inquiry-btn {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--blue-main);
+  background: transparent;
+  color: var(--blue-main);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.inquiry-btn.active {
+  background: var(--blue-main);
+  color: #fff;
+}
+
+/* ================= FOOTER ================= */
+.form-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+}
+
+button[type="submit"] {
+  margin-top: 1.5rem;
+  padding: 14px;
+  border-radius: 999px;
+  border: none;
+  background: var(--blue-dark);
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+
+/* ================= FAQ ================= */
+.faq-container {
+  max-width: 900px;
+  margin: 6rem auto;
+  padding: 0 2rem;
+}
+
+.faq-container h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--blue-dark);
+  margin-bottom: 1rem;
+}
+
+.faq-container .intro {
+  color: var(--text-soft);
+  max-width: 60ch;
+  margin-bottom: 3rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border-soft);
+  padding: 1.4rem 0;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+
+.faq-answer {
+  margin-top: 0.8rem;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  display: none;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+/* ================= CONTACT NOTE ================= */
+.contact-note {
+  margin-top: 3rem;
+  font-size: 0.95rem;
+}
+
+.contact-note a {
+  color: var(--blue-main);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+/* =====================================
+   MOBILE FIX – COSMIC HIMALAYA (REAL)
+===================================== */
+@media (max-width: 768px) {
+
+  /* -------- Overall container -------- */
+  .contact-container {
+    margin: 2.5rem auto;
+    padding: 0 1rem;
+    gap: 2.5rem;
+  }
+
+  /* -------- LEFT SIDE -------- */
+  .contact-left {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Image becomes controlled hero */
+  .contact-image {
+    height: 220px;              /* 🔴 KEY FIX */
+    border-radius: 16px;
+  }
+
+  /* Text spacing */
+  .contact-left-content {
+    padding: 0 0.25rem;
+  }
+
+  .contact-left-content h1 {
+    font-size: 1.6rem;
+    line-height: 1.25;
+    margin-bottom: 0.8rem;
+  }
+
+  .contact-left-content p {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .contact-info {
+    margin-top: 1.5rem;
+    font-size: 0.88rem;
+    line-height: 1.7;
+  }
+
+  /* -------- RIGHT FORM -------- */
+  .contact-right {
+    padding: 1.75rem 1.5rem;
+    border-radius: 18px;
+  }
+
+  .contact-right h2 {
+    font-size: 1.2rem;
+    letter-spacing: 0.06em;
+    margin-bottom: 1.3rem;
+  }
+
+  /* -------- FORM -------- */
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  input,
+  textarea {
+    padding: 12px 13px;
+    font-size: 0.9rem;
+  }
+
+  /* Inquiry buttons stack nicely */
+  .inquiry-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .inquiry-btn {
+    width: 100%;
+    padding: 11px;
+    font-size: 0.85rem;
+  }
+
+  /* Submit button */
+  button[type="submit"] {
+    margin-top: 1.2rem;
+    padding: 13px;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+  }
+
+  /* -------- FAQ -------- */
+  .faq-container {
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+
+  .faq-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .faq-container .intro {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* =====================================
+   SMALL MOBILE (≤ 480px)
+===================================== */
+@media (max-width: 480px) {
+
+  .contact-image {
+    height: 180px; /* 🔴 VERY IMPORTANT */
+  }
+
+  .contact-left-content h1 {
+    font-size: 1.45rem;
+  }
+
+  .contact-right {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+/* ================= FOOTER ================= */
+.site-footer {
+  background: #0b2c3d;
+  color: #ffffff;
+  padding: 4.5rem 1.5rem 2rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 3rem;
+}
+
+/* Columns */
+.footer-col h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.footer-col h4 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer-col p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #d3e1ea;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-col a {
+  color: #d3e1ea;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-col a:hover {
+  color: #ffffff;
+}
+
+/* Social */
+.footer-social {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social a {
+  font-size: 0.85rem;
+  color: #ffffff;
+}
+
+/* Bottom */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: #c6d7e1;
+}
+
+.footer-note {
+  opacity: 0.8;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}

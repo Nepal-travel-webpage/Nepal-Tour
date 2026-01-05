@@ -1,0 +1,637 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+
+.cinematic-hero {
+  height: 100vh;
+  background-image:
+    url("https://images.unsplash.com/photo-1509644851169-2acc08aa25b5");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.75)
+    );
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 2rem;
+  top: 55%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+.hero-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+  color: #d4af37;
+}
+
+.hero-inner h1 {
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 800;
+  margin: 1rem 0;
+}
+
+.hero-inner h1 span {
+  color: #d4af37;
+}
+
+.hero-inner p {
+  max-width: 600px;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+.hero-actions {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn-primary {
+  padding: 14px 38px;
+  background: linear-gradient(135deg,#d4af37,#b9972f);
+  color: #000;
+  font-weight: 700;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.btn-outline {
+  padding: 14px 38px;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.trip-planner-container {
+  background:
+    linear-gradient(180deg,#fff,#fafafa);
+  border-radius: 26px;
+  box-shadow:
+    0 40px 120px rgba(0,0,0,0.15);
+  padding: 4rem;
+}
+
+
+/* ================== EDITORIAL SECTION ================== */
+.editorial {
+  position: relative;
+  padding: clamp(6rem, 10vw, 9rem) 2rem;
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f6f9fb 100%
+    );
+  overflow: hidden;
+}
+
+/* Soft ambient background glow */
+.editorial::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(
+    circle,
+    rgba(11, 44, 61, 0.08),
+    transparent 70%
+  );
+  z-index: 0;
+}
+
+.editorial-grid {
+  position: relative;
+  z-index: 1;
+  max-width: 1240px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: clamp(3rem, 6vw, 5.5rem);
+  align-items: center;
+}
+
+/* ================== IMAGE ================== */
+.editorial-image {
+  position: relative;
+  height: 540px;
+  border-radius: 30px;
+  background-image:
+    linear-gradient(
+      rgba(0,0,0,0.15),
+      rgba(0,0,0,0.35)
+    ),
+    url("https://images.unsplash.com/photo-1519681393784-d120267933ba");
+  background-size: cover;
+  background-position: center;
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+/* Subtle glass edge */
+.editorial-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.15);
+}
+
+/* ================== TEXT ================== */
+.editorial h2 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.6rem;
+  color: #0b2c3d;
+}
+
+.editorial p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #445a66;
+  max-width: 46ch;
+}
+
+/* Accent divider */
+.editorial .accent-line {
+  width: 64px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    #0b2c3d,
+    #5fa3c3
+  );
+  border-radius: 10px;
+  margin-bottom: 1.6rem;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 900px) {
+  .editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .editorial-image {
+    height: 420px;
+  }
+
+  .editorial p {
+    max-width: 100%;
+  }
+}
+
+
+
+/* ================= EVEREST EXPERIENCE STRIP ================= */
+.experience-strip {
+  position: relative;
+  padding: clamp(4rem, 7vw, 6rem) 2rem;
+  background:
+    linear-gradient(
+      180deg,
+      #070b0f 0%,
+      #0b1c26 100%
+    );
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  text-align: center;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* Soft Himalayan glow */
+.experience-strip::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  width: 800px;
+  height: 800px;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    circle,
+    rgba(212,175,55,0.10),
+    transparent 70%
+  );
+}
+
+/* Individual experience */
+.exp {
+  position: relative;
+  z-index: 1;
+  padding: 1.5rem;
+}
+
+/* Main highlight text */
+.exp span {
+  display: block;
+  font-size: clamp(2.1rem, 4vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #d4af37;
+  margin-bottom: 0.7rem;
+}
+
+/* Supporting text */
+.exp p {
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+/* Elegant divider */
+.exp::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 2px;
+  margin: 1.4rem auto 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212,175,55,0.6),
+    transparent
+  );
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .experience-strip {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .exp {
+    padding: 0.5rem 0;
+  }
+}
+
+
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+}
+
+form {
+  max-width: 900px;
+  margin: 6rem auto;
+  padding: 4rem;
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 25px 70px rgba(11, 44, 61, 0.12);
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* ================= HEADER ================= */
+.trip-planner-container h1 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: #0b2c3d;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.02em;
+}
+
+.trip-planner-container p {
+  font-size: 1rem;
+  color: #5c6f7d;
+  max-width: 55ch;
+}
+
+.trip-planner-container strong {
+  display: block;
+  margin-top: 1.6rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #2b6f9b;
+}
+
+/* ================= SECTIONS ================= */
+.trip-planner-container,
+.section {
+  margin-top: 4rem;
+}
+
+/* ================= TITLES ================= */
+.question-title,
+.section h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0b2c3d;
+  margin-bottom: 1.5rem;
+}
+
+/* ================= GRIDS ================= */
+.checkbox-grid,
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+/* ================= OPTION CARDS ================= */
+label {
+  padding: 1.25rem 1.4rem;
+  border-radius: 14px;
+  border: 1px solid #d5e2ec;
+  background: #f9fcff;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.95rem;
+  color: #1f2d38;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+label:hover {
+  background: #eef6fb;
+  border-color: #9fc7df;
+}
+
+/* ================= INPUTS ================= */
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: #2b6f9b;
+  transform: scale(1.15);
+}
+
+/* ================= NOTES ================= */
+.note {
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+  color: #6c7f8d;
+  max-width: 65ch;
+}
+
+/* ================= TEXT INPUTS ================= */
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 1.1rem 1.3rem;
+  border-radius: 14px;
+  border: 1px solid #cddfea;
+  font-size: 0.95rem;
+  color: #0f172a;
+  background: #ffffff;
+  transition: border-color 0.2s ease;
+}
+
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2b6f9b;
+}
+
+/* ================= SUBMIT BUTTON ================= */
+input[type="submit"] {
+  margin-top: 4.5rem;
+  width: 100%;
+  padding: 1.3rem;
+  border-radius: 999px;
+  border: none;
+  background: #0b2c3d;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+input[type="submit"]:hover {
+  background: #13425c;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 700px) {
+  form {
+    padding: 2.5rem 2rem;
+    margin: 3rem 1rem;
+  }
+
+  .trip-planner-container h1 {
+    font-size: 2.1rem;
+  }
+}
+
+/* ================= MOBILE FIX ================= */
+@media (max-width: 640px) {
+
+  form {
+    margin: 2.5rem 1rem;
+    padding: 2.2rem 1.5rem;
+    border-radius: 18px;
+  }
+
+  /* Title */
+  .trip-planner-container h1 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+  }
+
+  .trip-planner-container p {
+    font-size: 0.95rem;
+  }
+
+  .trip-planner-container strong {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+  }
+
+  /* Section spacing */
+  .trip-planner-container,
+  .section {
+    margin-top: 2.8rem;
+  }
+
+  /* Headings */
+  .question-title,
+  .section h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  /* Force single-column layout (important) */
+  .checkbox-grid,
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Option cards */
+  label {
+    padding: 1rem 1.1rem;
+    font-size: 0.9rem;
+    border-radius: 12px;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    transform: scale(1.2);
+  }
+
+  /* Notes */
+  .note {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  /* Inputs */
+  input[type="email"],
+  textarea {
+    padding: 1rem 1.1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Submit button */
+  input[type="submit"] {
+    margin-top: 3rem;
+    padding: 1.1rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+  }
+}
+
+
+
+/* ================= FOOTER ================= */
+.site-footer {
+  background: #0b2c3d;
+  color: #ffffff;
+  padding: 4.5rem 1.5rem 2rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 3rem;
+}
+
+/* Columns */
+.footer-col h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.footer-col h4 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer-col p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #d3e1ea;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-col a {
+  color: #d3e1ea;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-col a:hover {
+  color: #ffffff;
+}
+
+/* Social */
+.footer-social {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social a {
+  font-size: 0.85rem;
+  color: #ffffff;
+}
+
+/* Bottom */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: #c6d7e1;
+}
+
+.footer-note {
+  opacity: 0.8;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
