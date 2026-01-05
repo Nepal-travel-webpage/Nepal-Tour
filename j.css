@@ -56,7 +56,7 @@ body {
   position: absolute;
   left: 80px;
   bottom: 80px;
-  background: var(--surface);
+  background: rgba(255, 255, 255, 0.06);
   padding: var(--space-md);
   max-width: 320px;
   border-radius: var(--radius-md);
