@@ -93,17 +93,34 @@
    LOGO
 ===================== */
 .logo-img {
-  height: 50px;
+  height: 88px;          /* strong but clean */
   width: auto;
   object-fit: contain;
-  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+
+  /* Clean visibility */
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.22));
+
+  transition: transform 0.25s ease, filter 0.25s ease;
 }
 
+/* Subtle hover – NOT playful */
 .logo-img:hover {
-  transform: scale(1.08) rotate(-2deg);
-  filter: drop-shadow(0 4px 12px rgba(255, 122, 0, 0.3));
+  transform: scale(1.04);
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.32));
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 58px;
+  }
+}
+.navbar {
+  background: #f9fbfd;   /* off-white, premium */
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+
 
 /* =====================
    CTA BUTTON
