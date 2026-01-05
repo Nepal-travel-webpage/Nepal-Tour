@@ -66,12 +66,12 @@ body {
 .hero-card h3 {
   font-size: 18px;
   margin-bottom: var(--space-xs);
-  color: var(--text);
+  color: white;
 }
 
 .hero-card p {
   font-size: 14px;
-  color: var(--text-muted);
+  color: white;
   margin-bottom: var(--space-sm);
   line-height: 1.6;
 }
