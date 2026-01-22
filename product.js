@@ -4,11 +4,11 @@ let currency = "INR";
 
 /* ================= PRODUCTS ================= */
 const products = [
-  { id: 1, title: "Sleeping Bag (Down)", desc: "-5°C to -20°C", price: 150, unit: "day", category: "sleeping", image: "https://images.unsplash.com/photo-1601933470928-c7c0b64c7e6a" },
+  { id: 1, title: "Sleeping Bag (Down)", desc: "-5°C to -20°C", price: 150, unit: "day", category: "sleeping", image: "WhatsApp Image 2026-01-15 at 4.22.50 PM.jpeg" },
   { id: 2, title: "Sleeping Bag (Down)", desc: "-30°C to -40°C", price: 200, unit: "day", category: "sleeping", image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" },
   { id: 3, title: "Down Jacket (Standard)", desc: "Cold protection jacket", price: 150, unit: "day", category: "clothing", image: "https://images.unsplash.com/photo-1519681393784-d120267933ba" },
-  { id: 4, title: "Tent", desc: "3+ days usage", price: 500, unit: "day", category: "camping", image: "https://images.unsplash.com/photo-1504280390368-3971f0e7f87b" },
-  { id: 5, title: "Trekking Shoes (Normal)", desc: "Daily trekking shoes", price: 200, unit: "day", category: "footwear", image: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6" },
+  { id: 4, title: "Tent", desc: "3+ days usage", price: 500, unit: "day", category: "camping", image: "WhatsApp Image 2026-01-15 at 4.22.50 PM.jpeg" },
+  { id: 5, title: "Trekking Shoes (Normal)", desc: "Daily trekking shoes", price: 200, unit: "day", category: "footwear", image: "WhatsApp Image 2026-01-15 at 4.22.53 PM (1).jpeg" },
   { id: 6, title: "Scarpa / La Sportiva", desc: "Premium mountaineering shoes", price: 4000, unit: "trip", category: "footwear", image: "https://images.unsplash.com/photo-1611095973515-7f6a76e2cfe3" },
   { id: 7, title: "Backpack 50–60L", desc: "High altitude backpack", price: 250, unit: "day", category: "backpack", image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429" },
   { id: 8, title: "Trekking Pole", desc: "10–12 days trip", price: 500, unit: "trip", category: "accessories", image: "https://images.unsplash.com/photo-1622560480654-d96214fdc887" },

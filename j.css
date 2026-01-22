@@ -63,6 +63,13 @@ body {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
 
+.hero-card h1 {
+  font-size: 18px;
+  margin-bottom: var(--space-xs);
+  color: white;
+}
+
+
 .hero-card h3 {
   font-size: 18px;
   margin-bottom: var(--space-xs);
@@ -821,6 +828,9 @@ body {
 
   .hero-card h3 {
     font-size: 16px;
+  }
+  .hero-card h1 {
+    font-size: 40px;
   }
 
   .hero-card p {
