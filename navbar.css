@@ -34,7 +34,7 @@
 .nav-inner {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 1.2rem 2rem;
+  padding: 0.75rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,7 +43,7 @@
 /* =====================
    NAV SECTIONS
 ===================== */
-.nav-left, 
+.nav-left,
 .nav-right {
   display: flex;
   align-items: center;
@@ -70,7 +70,7 @@
 }
 
 .nav-left a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -93,14 +93,16 @@
    LOGO
 ===================== */
 .logo-img {
-  height: 100px;          /* strong but clean */
+  height: 70px; /* strong but clean */
   width: 150px;
   object-fit: cover;
 
   /* Clean visibility */
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.22));
 
-  transition: transform 0.25s ease, filter 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
 }
 
 /* Subtle hover – NOT playful */
@@ -116,11 +118,9 @@
   }
 }
 .navbar {
-  background: #f9fbfd;   /* off-white, premium */
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+  background: #f9fbfd; /* off-white, premium */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
-
-
 
 /* =====================
    CTA BUTTON
@@ -143,7 +143,7 @@
 }
 
 .pill::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -152,7 +152,9 @@
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.3);
   transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
+  transition:
+    width 0.6s,
+    height 0.6s;
 }
 
 .pill:hover::before {
@@ -250,7 +252,7 @@
 }
 
 .mobile-menu a::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -266,7 +268,11 @@
 }
 
 .mobile-menu a:hover {
-  background: linear-gradient(90deg, rgba(255, 122, 0, 0.08) 0%, transparent 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 122, 0, 0.08) 0%,
+    transparent 100%
+  );
   color: var(--nav-accent);
   padding-left: 2.5rem;
 }
@@ -298,19 +304,23 @@
    STAGGERED ANIMATION
 ===================== */
 .mobile-menu.open a:nth-child(1) {
-  animation: slideInFromTop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.1s backwards;
+  animation: slideInFromTop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.1s
+    backwards;
 }
 
 .mobile-menu.open a:nth-child(2) {
-  animation: slideInFromTop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.2s backwards;
+  animation: slideInFromTop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.2s
+    backwards;
 }
 
 .mobile-menu.open a:nth-child(3) {
-  animation: slideInFromTop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s backwards;
+  animation: slideInFromTop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s
+    backwards;
 }
 
 .mobile-menu.open .pill {
-  animation: slideInFromTop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s backwards;
+  animation: slideInFromTop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s
+    backwards;
 }
 
 @keyframes slideInFromTop {
@@ -363,7 +373,7 @@
   }
 
   .logo-img {
-    height: 40px;
+    height: 58px; /* keep complete logo visible */
   }
 
   .nav-inner {
@@ -373,7 +383,7 @@
 
 @media (max-width: 480px) {
   .logo-img {
-    height: 35px;
+    width: 100px;
   }
 
   .nav-inner {
