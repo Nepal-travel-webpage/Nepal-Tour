@@ -4,15 +4,87 @@ let currency = "INR";
 
 /* ================= PRODUCTS ================= */
 const products = [
-  { id: 1, title: "Sleeping Bag (Down)", desc: "-5°C to -20°C", price: 150, unit: "day", category: "sleeping", image: "WhatsApp Image 2026-01-15 at 4.22.50 PM.jpeg" },
-  { id: 2, title: "Sleeping Bag (Down)", desc: "-30°C to -40°C", price: 200, unit: "day", category: "sleeping", image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" },
-  { id: 3, title: "Down Jacket (Standard)", desc: "Cold protection jacket", price: 150, unit: "day", category: "clothing", image: "https://images.unsplash.com/photo-1519681393784-d120267933ba" },
-  { id: 4, title: "Tent", desc: "3+ days usage", price: 500, unit: "day", category: "camping", image: "WhatsApp Image 2026-01-15 at 4.22.50 PM.jpeg" },
-  { id: 5, title: "Trekking Shoes (Normal)", desc: "Daily trekking shoes", price: 200, unit: "day", category: "footwear", image: "WhatsApp Image 2026-01-15 at 4.22.53 PM (1).jpeg" },
-  { id: 6, title: "Scarpa / La Sportiva", desc: "Premium mountaineering shoes", price: 4000, unit: "trip", category: "footwear", image: "https://images.unsplash.com/photo-1611095973515-7f6a76e2cfe3" },
-  { id: 7, title: "Backpack 50–60L", desc: "High altitude backpack", price: 250, unit: "day", category: "backpack", image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429" },
-  { id: 8, title: "Trekking Pole", desc: "10–12 days trip", price: 500, unit: "trip", category: "accessories", image: "https://images.unsplash.com/photo-1622560480654-d96214fdc887" },
-  { id: 9, title: "Climbing Shoes", desc: "Whole trip (10–12 days)", price: 10000, unit: "trip", category: "climbing", image: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6" }
+  {
+    id: 1,
+    title: "Sleeping Bag (Down)",
+    desc: "-5°C to -20°C",
+    price: 150,
+    unit: "day",
+    category: "sleeping",
+    image: "sleepingBag3.jpg",
+  },
+  {
+    id: 2,
+    title: "Sleeping Bag (Down)",
+    desc: "-30°C to -40°C",
+    price: 200,
+    unit: "day",
+    category: "sleeping",
+    image: "sleepingBag10.png",
+  },
+  {
+    id: 3,
+    title: "Down Jacket (Standard)",
+    desc: "Cold protection jacket",
+    price: 150,
+    unit: "day",
+    category: "clothing",
+    image: "longJacket.jpg",
+  },
+  {
+    id: 4,
+    title: "Tent",
+    desc: "3+ days usage",
+    price: 500,
+    unit: "day",
+    category: "camping",
+    image: "Tent10.png",
+  },
+  {
+    id: 5,
+    title: "Trekking Shoes (Normal)",
+    desc: "Daily trekking shoes",
+    price: 200,
+    unit: "day",
+    category: "footwear",
+    image: "trekkingShoes10.png",
+  },
+  {
+    id: 6,
+    title: "Scarpa / La Sportiva",
+    desc: "Premium mountaineering shoes",
+    price: 4000,
+    unit: "trip",
+    category: "footwear",
+    image: "La_Sportiva10.png",
+  },
+  {
+    id: 7,
+    title: "Backpack 50–60L",
+    desc: "High altitude backpack",
+    price: 250,
+    unit: "day",
+    category: "backpack",
+    image: "bagpack50l.jpg",
+  },
+  {
+    id: 8,
+    title: "Trekking Pole",
+    desc: "10–12 days trip",
+    price: 500,
+    unit: "trip",
+    category: "accessories",
+    image: "Trekking Poles.jpg",
+  },
+  {
+    id: 9,
+    title: "Climbing Shoes",
+    desc: "Whole trip (10–12 days)",
+    price: 10000,
+    unit: "trip",
+    category: "climbing",
+    image: "Climbing Shoes.jpg",
+  },
 ];
 
 /* ================= STATE ================= */
@@ -34,13 +106,13 @@ const closeEnquiryBtn = document.querySelector(".close-enquiry");
 const cartDetailsInput = document.getElementById("cartDetails");
 
 /* ================= UTIL ================= */
-const formatPrice = v =>
+const formatPrice = (v) =>
   currency === "INR" ? `₹${v}` : `$${(v * USD_RATE).toFixed(2)}`;
 
 /* ================= RENDER PRODUCTS ================= */
 function renderProducts(list) {
   grid.innerHTML = "";
-  list.forEach(p => {
+  list.forEach((p) => {
     grid.innerHTML += `
       <div class="product-card">
         <img src="${p.image}" alt="${p.title}">
@@ -49,11 +121,13 @@ function renderProducts(list) {
           <p>${p.desc}</p>
           <strong>${formatPrice(p.price)} / ${p.unit}</strong>
 
-          ${p.unit === "day"
-            ? `<select class="day-select">
-                ${[1,2,3,5,7,10,14].map(d => `<option value="${d}">${d} days</option>`).join("")}
+          ${
+            p.unit === "day"
+              ? `<select class="day-select">
+                ${[1, 2, 3, 5, 7, 10, 14].map((d) => `<option value="${d}">${d} days</option>`).join("")}
               </select>`
-            : ""}
+              : ""
+          }
 
           <button data-id="${p.id}">Add to Cart</button>
         </div>
@@ -70,7 +144,7 @@ function updateCart() {
   let total = 0;
   let waText = "Trekking Gear Enquiry:%0A";
 
-  cart.forEach(i => {
+  cart.forEach((i) => {
     const days = i.days || 1;
     total += i.price * i.qty * days;
     waText += `• ${i.title} (${days} ${i.unit}) x${i.qty}%0A`;
@@ -84,13 +158,13 @@ function updateCart() {
   });
 
   cartTotal.textContent = formatPrice(total);
-  cartCount.textContent = cart.reduce((a,b) => a + b.qty, 0);
+  cartCount.textContent = cart.reduce((a, b) => a + b.qty, 0);
   whatsappBtn.href = `https://wa.me/9779742381257?text=${waText}`;
 }
 
 function addToCart(id, days = 1) {
-  const p = products.find(x => x.id === id);
-  const existing = cart.find(i => i.id === id && i.days === days);
+  const p = products.find((x) => x.id === id);
+  const existing = cart.find((i) => i.id === id && i.days === days);
 
   if (existing) existing.qty++;
   else cart.push({ ...p, qty: 1, days });
@@ -99,12 +173,12 @@ function addToCart(id, days = 1) {
 }
 
 function removeItem(id) {
-  cart = cart.filter(i => i.id !== id);
+  cart = cart.filter((i) => i.id !== id);
   updateCart();
 }
 
 /* ================= EVENTS ================= */
-grid.addEventListener("click", e => {
+grid.addEventListener("click", (e) => {
   if (e.target.tagName === "BUTTON") {
     const card = e.target.closest(".product-card");
     const days = card.querySelector(".day-select")?.value || 1;
@@ -135,9 +209,11 @@ checkoutBtn.addEventListener("click", () => {
     return;
   }
 
-  const message = cart.map(i =>
-    `${i.title} - ${i.days || 1} ${i.unit} × ${i.qty} (₹${i.price})`
-  ).join("\n");
+  const message = cart
+    .map(
+      (i) => `${i.title} - ${i.days || 1} ${i.unit} × ${i.qty} (₹${i.price})`,
+    )
+    .join("\n");
 
   cartDetailsInput.value = message;
   enquiryModal.classList.add("active");
@@ -152,21 +228,24 @@ document.getElementById("currencyToggle").onclick = () => {
   updateCart();
 };
 
-document.getElementById("searchInput").oninput = e => {
+document.getElementById("searchInput").oninput = (e) => {
   const q = e.target.value.toLowerCase();
-  renderProducts(products.filter(p => p.title.toLowerCase().includes(q)));
+  renderProducts(products.filter((p) => p.title.toLowerCase().includes(q)));
 };
 
-document.getElementById("categoryFilter").onchange = e => {
+document.getElementById("categoryFilter").onchange = (e) => {
   const v = e.target.value;
-  renderProducts(v === "all" ? products : products.filter(p => p.category === v));
+  renderProducts(
+    v === "all" ? products : products.filter((p) => p.category === v),
+  );
 };
 
 /* ================= INIT ================= */
 (function init() {
-  const cats = ["all", ...new Set(products.map(p => p.category))];
-  document.getElementById("categoryFilter").innerHTML =
-    cats.map(c => `<option value="${c}">${c}</option>`).join("");
+  const cats = ["all", ...new Set(products.map((p) => p.category))];
+  document.getElementById("categoryFilter").innerHTML = cats
+    .map((c) => `<option value="${c}">${c}</option>`)
+    .join("");
 
   renderProducts(products);
   updateCart();
