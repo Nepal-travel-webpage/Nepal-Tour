@@ -1,0 +1,78 @@
+/* ===== SHERPA SECTION ===== */
+
+.sherpa-section{
+  margin-top:120px;
+  padding-top:60px;
+  border-top:2px solid #eee;
+}
+
+/* TITLE */
+.sherpa-title{
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight:600;
+  margin-bottom:60px;
+  text-transform:uppercase;
+  text-align:center;
+  letter-spacing:2px;
+}
+
+/* GRID */
+.sherpa-grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:60px;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+/* CARD */
+.sherpa-card{
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  transition:0.4s ease;
+}
+
+/* IMAGE */
+.sherpa-card img{
+  width:100%;
+  height:340px;
+  object-fit:cover;
+  transition:0.6s ease;
+  filter:grayscale(100%);
+}
+
+/* CONTENT */
+.sherpa-content{
+  padding:25px;
+}
+
+.sherpa-content h3{
+  font-size:20px;
+  margin-bottom:12px;
+}
+
+.sherpa-content p{
+  font-size:15px;
+  line-height:1.7;
+  color:#555;
+}
+
+/* FULL CARD HOVER */
+.sherpa-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 25px 45px rgba(0,0,0,0.15);
+}
+
+.sherpa-card:hover img{
+  transform:scale(1.08);
+  filter:grayscale(0%);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .sherpa-grid{
+    grid-template-columns:1fr;
+  }
+}
