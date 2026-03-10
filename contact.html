@@ -193,40 +193,38 @@
 
     <!-- Contact Container -->
     <div class="contact-container">
-      <div class="contact-left">
-        <div class="contact-left-content">
-          <h1>Your Himalayan Journey Begins Here</h1>
+      <div class="contact-left-content">
+        <h1>Your Himalayan Journey Begins Here</h1>
+        <p>
+          At Cosmic Himalaya, every journey is crafted with deep respect for the
+          mountains, local culture, and the spirit of adventure. Whether you are
+          trekking to Everest Base Camp, Annapurna Base Camp, or embarking on
+          the sacred Kailash Mansarovar Yatra, our experts are here to guide
+          you.
+        </p>
+
+        <div class="contact-info">
           <p>
-            At Cosmic Himalaya, every journey is crafted with deep respect for
-            the mountains, local culture, and the spirit of adventure. Whether
-            you are trekking to Everest Base Camp, Annapurna Base Camp, or
-            embarking on the sacred Kailash Mansarovar Yatra, our experts are
-            here to guide you.
+            <strong>Our Base</strong><br />
+            Kathmandu, Nepal<br />
+            Serving Everest, Annapurna & Kailash Regions<br />
+            Monday–Sunday | 08:00 AM – 06:00 PM (NPT)
           </p>
 
-          <div class="contact-info">
-            <p>
-              <strong>Our Base</strong><br />
-              Kathmandu, Nepal<br />
-              Serving Everest, Annapurna & Kailash Regions<br />
-              Monday–Sunday | 08:00 AM – 06:00 PM (NPT)
-            </p>
+          <p>
+            <strong>Email</strong><br />
+            info@cosmichimalaya.com
+          </p>
 
-            <p>
-              <strong>Email</strong><br />
-              info@cosmichimalaya.com
-            </p>
+          <p>
+            <strong>Contact</strong><br />
+            +977 98XXXXXXXX | +977 97XXXXXXXX
+          </p>
 
-            <p>
-              <strong>Contact</strong><br />
-              +977 98XXXXXXXX | +977 97XXXXXXXX
-            </p>
-
-            <p>
-              <strong>Social Media</strong><br />
-              Instagram · Facebook · LinkedIn
-            </p>
-          </div>
+          <p>
+            <strong>Social Media</strong><br />
+            Instagram · Facebook · LinkedIn
+          </p>
         </div>
       </div>
 
@@ -303,16 +301,13 @@
           </div>
 
           <div class="form-group">
-            <textarea
-              name="message"
-              rows="5"
-              placeholder="Please share:
-• Preferred trek (Everest / Annapurna / Kailash)
-• Number of trekkers
-• Planned travel month
-• Previous trekking experience
-• Any special requirements"
-            ></textarea>
+            <select name="trek_choice" id="trek" required>
+              <option value="" disabled selected>Choose a trek...</option>
+              <option value="everest">Everest Base Camp</option>
+              <option value="annapurna">Annapurna Circuit</option>
+              <option value="kailash">Mount Kailash Search</option>
+              <option value="other">Other / Custom Inquiry</option>
+            </select>
           </div>
 
           <div class="form-footer">
