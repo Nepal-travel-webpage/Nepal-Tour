@@ -3,17 +3,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Wait for DOM
 document.addEventListener("DOMContentLoaded", () => {
-
   /* ================= HERO ANIMATION ================= */
   gsap.from(".hero-card", {
     y: 30,
     opacity: 0,
     duration: 1,
-    ease: "power2.out"
+    ease: "power2.out",
   });
 
   /* ================= SECTION SCROLL ANIMATIONS ================= */
-  gsap.utils.toArray("section").forEach(sec => {
+  gsap.utils.toArray("section").forEach((sec) => {
     gsap.from(sec, {
       y: 60,
       opacity: 0,
@@ -21,8 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
       ease: "power2.out",
       scrollTrigger: {
         trigger: sec,
-        start: "top 80%"
-      }
+        start: "top 80%",
+      },
     });
   });
 
@@ -41,11 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Close menu on link click
-  menu.querySelectorAll("a, button").forEach(link => {
+  menu.querySelectorAll("a, button").forEach((link) => {
     link.addEventListener("click", () => {
       burger.classList.remove("active");
       menu.classList.remove("open");
     });
   });
-
 });
