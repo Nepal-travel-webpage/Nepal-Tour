@@ -1044,7 +1044,10 @@ body {
   font-size: 0.85rem;
   color: #ffffff;
 }
-
+.footer-social a:hover {
+  font-size: 0.85rem;
+  color: #ffffff5a;
+}
 /* Bottom */
 .footer-bottom {
   max-width: 1200px;
@@ -1145,6 +1148,10 @@ body {
 .footer-social a {
   font-size: 0.85rem;
   color: #ffffff;
+}
+.footer-social a:hover {
+  font-size: 0.85rem;
+  color: #ffffff5a;
 }
 
 /* Bottom */

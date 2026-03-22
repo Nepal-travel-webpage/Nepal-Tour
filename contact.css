@@ -494,6 +494,11 @@ button[type="submit"] {
 .footer-social a {
   font-size: 0.85rem;
   color: #ffffff;
+  transition: 0.15s ease-in;
+}
+.footer-social a:hover {
+  font-size: 0.85rem;
+  color: #ffffff5a;
 }
 
 /* Bottom */
