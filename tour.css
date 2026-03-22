@@ -271,6 +271,12 @@ body {
 .download-btn {
   text-decoration: none;
   color: #0b2c3d;
+  transition: 0.15s ease-in;
+}
+.download-btn:hover {
+  opacity: 0.8;
+  scale: 0.9;
+  /* border-bottom: 1px solid #0b2c3d; */
 }
 /* ============ PAGINATION ============ */
 .pagination {
