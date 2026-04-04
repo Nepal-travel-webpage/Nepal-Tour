@@ -278,6 +278,158 @@ body {
   scale: 0.9;
   /* border-bottom: 1px solid #0b2c3d; */
 }
+/* Batch Dates Section */
+.batch-dates-section {
+  padding: 100px 5%;
+  background-color: #f4f8fb;
+  font-family: "Inter", sans-serif;
+}
+
+.batch-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.batch-header h1 {
+  color: #0b2c3d;
+  font-size: 2.2rem;
+  margin: 15px 0;
+  font-weight: 700;
+}
+
+.batch-header p {
+  color: #555;
+  margin-bottom: 50px;
+}
+
+.batch-badge {
+  background: #e0eaff;
+  color: #3261d6;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Grid Layout */
+.batch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  align-items: stretch;
+}
+
+/* Card Styling */
+.batch-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.batch-card.featured {
+  border: 2px solid #3261d6;
+  transform: scale(1.03);
+}
+
+.popular-tag {
+  position: absolute;
+  top: -12px;
+  right: 40px;
+  background: #3261d6;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.batch-card-content {
+  text-align: left;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Internal Rows */
+.date-row,
+.route-row,
+.extra-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.date-row h3 {
+  font-size: 1.3rem;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.route-row p,
+.extra-row p {
+  margin: 0;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.extra-row p {
+  color: #3261d6;
+  font-weight: 500;
+}
+
+.extra-row p span {
+  color: #777;
+  font-size: 0.8rem;
+}
+
+/* Status Labels */
+.status {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.status.filling {
+  color: #d97706;
+}
+.status.open {
+  color: #666;
+}
+
+/* Button */
+.batch-btn {
+  margin-top: auto;
+  background: #3261d6;
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.batch-btn:hover {
+  background: #2549a8;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .batch-card.featured {
+    transform: scale(1);
+    margin: 20px 0;
+  }
+}
 
 /* ============ PAGINATION ============ */
 .pagination {
